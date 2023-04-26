@@ -1,8 +1,15 @@
 import logo from "../assets/logo.png";
 import "../global.css";
-import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
+
 
 function Login() {
+    const navigate = useNavigate();
+
+    function handleClick() {
+        navigate('/home');
+    }
+
     return (
         <div className="container">
             <header className="header">
@@ -18,9 +25,9 @@ function Login() {
                     <input type="password" name="password" id="password" placeholder="Insira sua senha" />
                 </div>
                 <a href="">Esqueceu sua senha?</a>
-                <Link to="/home" className="button">
+                <button onClick={handleClick} className="button">
                     FAZER LOGIN
-                </Link>
+                </button>
             </form>
         </div>
     );

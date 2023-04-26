@@ -1,12 +1,9 @@
-import Login from "./views/Login";
-import Home from "./views/Home";
-
+import Rotas from "./Routes";
 function App() {
     return (
-        <>
-            <Login />
-            <Home />
-        </>
+        <div>
+            <Rotas />
+        </div>
     )
 }
 
